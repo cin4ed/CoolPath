@@ -13,7 +13,7 @@ def getPATH():
 # Function to display a cool view of the path
 def displayPathListForm(STR_PATH):
 
-	# Converting the path string into a list to modify it
+	# Converting the PATH string into a list to modify it
 	PATH = list(STR_PATH)
 
 	# Counter for the numbered list, and insertion of the first path in the PATH with the number '1'
