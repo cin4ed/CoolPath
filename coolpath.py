@@ -22,7 +22,7 @@ def getPATH():
 	PATH = os.environ.get('PATH')
 	return PATH
 
-# This function divide each path in the PATH variable and store it in another list. crazy no?
+# This function divide each path in the PATH variable and store it into another list. crazy no?
 def listOfPaths(PATH):
 
 	listOfPaths = list(PATH) # Convert the String PATH to a list PATH
