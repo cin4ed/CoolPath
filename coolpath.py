@@ -13,12 +13,17 @@ Options:
 
 """
 from docopt import docopt
+from clint.textui import colored, puts, indent
 import os
 
-PATH = os.environ.get('PATH')
+PATH = os.environ.get('PATH').split(':')
 
 def showPath():
-  print(PATH)
+  index = 0
+  for path in PATH:
+    with indent(2, quote=' > '):
+      puts(f'{colored.green(index)}: {path}')
+    index += 1
 
 def add(path):
   print('add executed, {0} added to the path'.format(path))
@@ -35,6 +40,5 @@ if __name__ == '__main__':
     add(arguments['<path>'])
   elif arguments['remove']:
     remove(arguments['<path>'])
-
-  # for debugging
+  
   # print(arguments)
