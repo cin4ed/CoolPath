@@ -27,7 +27,10 @@ def showPath():
     index += 1
 
 def add(pathsToAdd):
-  pass
+  newPATH = PATH
+  for path in pathsToAdd:
+    newPATH += f':{path}'
+  os.environ['PATH'] = newPATH
 
 def remove(path):
   print('remove executed, {0} removed from path'.format(path))
