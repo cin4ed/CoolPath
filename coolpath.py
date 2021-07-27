@@ -27,13 +27,14 @@ def showPath():
     index += 1
 
 def add(pathsToAdd):
+  # Experimental
   newPATH = PATH
   for path in pathsToAdd:
     newPATH += f':{path}'
   os.environ['PATH'] = newPATH
 
 def remove(path):
-  print('remove executed, {0} removed from path'.format(path))
+  pass
 
 if __name__ == '__main__':
   arguments = docopt(__doc__, version='CoolPath v1.0')
