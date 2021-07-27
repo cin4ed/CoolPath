@@ -16,17 +16,18 @@ from docopt import docopt
 from clint.textui import colored, puts, indent
 import os
 
-PATH = os.environ.get('PATH').split(':')
+PATH = os.environ.get('PATH')
 
 def showPath():
   index = 0
-  for path in PATH:
-    with indent(2, quote=' > '):
+  pathList = PATH.split(':')
+  for path in pathList:
+    with indent(2, quote=colored.blue('> ')):
       puts(f'{colored.green(index)}: {path}')
     index += 1
 
-def add(path):
-  print('add executed, {0} added to the path'.format(path))
+def add(pathsToAdd):
+  pass
 
 def remove(path):
   print('remove executed, {0} removed from path'.format(path))
